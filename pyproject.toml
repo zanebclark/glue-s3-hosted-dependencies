@@ -1,0 +1,24 @@
+[project]
+name = "glue-s3-hosted-dependencies"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Zane Clark", email = "zanebclark@gmail.com"},
+]
+dependencies = ["structlog>=25.4.0", "click>=8.2.1", "boto3>=1.40.8"]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[project.optional-dependencies]
+dev = [
+    "black[d]>=25.1.0",
+    "pytest>=8.4.1",
+    "flake8>=7.3.0",
+    "pre-commit>=4.2.0",
+    "moto>=5.1.10",
+    "boto3-stubs[boto3,s3,ssm]>=1.40.11",
+]
+[tool.pdm]
+distribution = false
